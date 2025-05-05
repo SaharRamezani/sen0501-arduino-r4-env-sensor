@@ -8,7 +8,7 @@ void setup() {
   delay(1000);
   Wire.begin();
 
-  if (!sensor.begin()) {
+  if (sensor.begin()) {
     Serial.println("Failed to initialize SEN0501 sensor.");
     while (1);
   }
